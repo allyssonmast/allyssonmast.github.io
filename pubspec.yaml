@@ -13,6 +13,7 @@ dependencies:
   url_launcher:
   simple_icons: ^7.10.0
   google_fonts:
+  url_strategy:
   lottie:
   flutter: 
     sdk: flutter
@@ -26,6 +27,13 @@ dev_dependencies:
 
 animated_native_splash:
   jsonFile: asset/lottie_2.json
+
+web:
+  build:
+    generate: true
+    options:
+      --no-sound-null-safety
+    output: build
 
 flutter:
   assets:

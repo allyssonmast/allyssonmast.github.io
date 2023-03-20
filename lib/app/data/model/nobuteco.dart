@@ -15,6 +15,7 @@ class Nobuteco {
     required this.logo,
     required this.description,
     required this.subtTitle,
+    required this.pages,
     required this.instructions,
   });
 
@@ -23,11 +24,13 @@ class Nobuteco {
   String logo;
   String subtTitle;
   String description;
+  Map<String,dynamic> pages;
   List<String> instructions;
 
   factory Nobuteco.fromJson(Map<String, dynamic> json) => Nobuteco(
     name: json["name"],
     subtTitle: json["subtTitle"],
+    pages: json["pages"],
     asset: json["asset"],
     logo: json["logo"],
     description: json["description"],

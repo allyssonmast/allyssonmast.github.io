@@ -5,6 +5,7 @@ import 'package:page/app/utils/constants.dart';
 class AppDatailsController extends GetxController {
   late Nobuteco app;
   RxBool loading = true.obs;
+  RxInt indexPage=0.obs;
 
   final count = 0.obs;
   @override

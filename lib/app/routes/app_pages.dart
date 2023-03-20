@@ -10,6 +10,8 @@ import '../modules/notfound/bindings/notfound_binding.dart';
 import '../modules/notfound/views/notfound_view.dart';
 import '../modules/portfolio/bindings/portfolio_binding.dart';
 import '../modules/portfolio/views/portfolio_view.dart';
+import '../modules/project/bindings/project_binding.dart';
+import '../modules/project/views/project_view.dart';
 
 part 'app_routes.dart';
 
@@ -44,6 +46,11 @@ class AppPages {
       name: _Paths.ABOUT_ME,
       page: () => const AboutMeView(),
       binding: AboutMeBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROJECT,
+      page: () => const ProjectView(),
+      binding: ProjectBinding(),
     ),
   ];
 }
