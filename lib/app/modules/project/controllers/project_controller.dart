@@ -4,7 +4,7 @@ import 'package:page/app/utils/project_constants.dart';
 
 class ProjectController extends GetxController {
   late Project? project;
-  RxInt indexTab=0.obs;
+  RxInt indexTab = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -21,16 +21,12 @@ class ProjectController extends GetxController {
     super.onClose();
   }
 
-  var map={
-    'Kotlin Applications':androidProjects,
+  var map = {
+    'Kotlin Applications': androidProjects,
     'noButeco App': noButecoProject
   };
 
-  _feachtProject(){
-   project = map[Get.parameters['id']];
-
+  _feachtProject() {
+    project = noButecoProject;
   }
-
-
-
 }

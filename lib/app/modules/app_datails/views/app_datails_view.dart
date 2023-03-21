@@ -19,6 +19,7 @@ class AppDatailsView extends GetView<AppDatailsController> {
             appBar: AppBar(
               title: Text(controller.app.name),
               centerTitle: true,
+                leading: Container()
             ),
             body: Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0.sp),

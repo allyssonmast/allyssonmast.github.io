@@ -19,6 +19,7 @@ class ProjectView extends GetView<ProjectController> {
             slivers: [
               SliverAppBar(
                 pinned: true,
+                leading: Container(),
                 title: Text(controller.project!.projectName),
               ),
               SliverPadding(

@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import '../controllers/project_controller.dart';
 
 class ProjectBinding extends Bindings {

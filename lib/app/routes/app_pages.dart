@@ -4,6 +4,8 @@ import '../modules/about_me/bindings/about_me_binding.dart';
 import '../modules/about_me/views/about_me_view.dart';
 import '../modules/app_datails/bindings/app_datails_binding.dart';
 import '../modules/app_datails/views/app_datails_view.dart';
+import '../modules/git_repositories/bindings/git_repositories_binding.dart';
+import '../modules/git_repositories/views/git_repositories_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/notfound/bindings/notfound_binding.dart';
@@ -51,6 +53,11 @@ class AppPages {
       name: _Paths.PROJECT,
       page: () => const ProjectView(),
       binding: ProjectBinding(),
+    ),
+    GetPage(
+      name: _Paths.GIT_REPOSITORIES,
+      page: () => const GitRepositoriesView(),
+      binding: GitRepositoriesBinding(),
     ),
   ];
 }

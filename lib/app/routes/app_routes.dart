@@ -9,6 +9,7 @@ abstract class Routes {
   static const PORTFOLIO = _Paths.PORTFOLIO;
   static const ABOUT_ME = _Paths.ABOUT_ME;
   static const PROJECT = _Paths.PROJECT;
+  static const GIT_REPOSITORIES = _Paths.GIT_REPOSITORIES;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PORTFOLIO = '/portfolio';
   static const ABOUT_ME = '/about-me';
   static const PROJECT = '/project';
+  static const GIT_REPOSITORIES = '/git-repositories';
 }
