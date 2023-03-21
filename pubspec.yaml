@@ -14,6 +14,10 @@ dependencies:
   simple_icons: ^7.10.0
   google_fonts:
   url_strategy:
+  http:
+  equatable:
+  dartz:
+  freezed_annotation:
   lottie:
   flutter: 
     sdk: flutter
@@ -22,6 +26,8 @@ dependencies:
 dev_dependencies: 
   flutter_lints: ^2.0.0
   animated_native_splash:
+  build_runner:
+  freezed:
   flutter_test: 
     sdk: flutter
 

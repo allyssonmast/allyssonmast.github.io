@@ -5,7 +5,6 @@ import 'package:page/app/utils/project_constants.dart';
 class ProjectController extends GetxController {
   late Project? project;
   RxInt indexTab=0.obs;
-
   @override
   void onInit() {
     super.onInit();
