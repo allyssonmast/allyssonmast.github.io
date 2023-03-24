@@ -103,7 +103,10 @@ class BodyProject extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return body is String
-        ? Text(body)
+        ? Padding(
+          padding: EdgeInsets.all(16.0.sp),
+          child: Text(body.toString().tr),
+        )
         : AppWidget(
             nobutecoList: body,
           );

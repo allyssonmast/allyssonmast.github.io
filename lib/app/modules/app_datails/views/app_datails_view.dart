@@ -132,13 +132,9 @@ class PagesDetailsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 15.0.sp, horizontal: 16.0.sp),
-          child: Text(app.pages.values.toList()[indexPage]['text']),
-        ),
         ListView.builder(
             shrinkWrap: true,
-            padding: EdgeInsets.symmetric(horizontal: 8.0.sp),
+            padding: EdgeInsets.symmetric(horizontal: 8.0.sp,vertical: 8.sp),
             physics: const NeverScrollableScrollPhysics(),
             itemCount: app.pages.values.toList()[indexPage]['details'].length,
             itemBuilder: (_, index) {
@@ -155,7 +151,7 @@ class PagesDetailsWidget extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        app.pages.values.toList()[indexPage]['details'][index],
+                        app.pages.values.toList()[indexPage]['details'][index].toString().tr,
                       ),
                     ),
                   ],

@@ -6,7 +6,6 @@ import 'package:page/app/modules/notfound/views/notfound_view.dart';
 import 'package:page/app/utils/theme.dart';
 import 'package:url_strategy/url_strategy.dart';
 
-import 'app/modules/home/views/home_view.dart';
 import 'app/modules/notfound/bindings/notfound_binding.dart';
 import 'app/routes/app_pages.dart';
 import 'app/utils/translation.dart';
@@ -53,10 +52,9 @@ class MyApp extends StatelessWidget {
           themeMode: ThemeMode.system,
           theme: lightTheme,
           darkTheme: darkTheme,
-          home: child,
+          initialRoute: Routes.HOME,
         );
       },
-      child: const HomeView(),
     );
   }
 }

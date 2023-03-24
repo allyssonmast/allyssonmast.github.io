@@ -86,9 +86,19 @@ var nobutecoPagesDetais = {
   },
 };
 
+
 var nobutecoErpPagesDetais = {
   'home': {
-    'details': [],
+    'details': [
+      'bar_home_1',
+      'bar_home_2',
+      'bar_home_3',
+      'bar_home_4',
+      'bar_home_5',
+      'bar_home_6',
+      'bar_home_7',
+      'bar_home_8',
+    ],
     'text': '',
     'assets': [
       'asset/homebar_1.jpg',
@@ -99,7 +109,13 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'pagamento': {
-    'details': [],
+    'details': [
+      'bar_pagamento_1',
+      'bar_pagamento_2',
+      'bar_pagamento_3',
+      'bar_pagamento_4',
+      'bar_pagamento_5',
+    ],
     'text': '',
     'assets': [
       'asset/pagamentobar_1.jpg',
@@ -108,7 +124,13 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'historico': {
-    'details': [],
+    'details': [
+      'bar_historico_1',
+      'bar_historico_2',
+      'bar_historico_3',
+      'bar_historico_4',
+      'bar_historico_5',
+    ],
     'text': '',
     'assets': [
       'asset/historico_1.jpg',
@@ -116,7 +138,14 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'reserva': {
-    'details': [],
+    'details': [
+      'bar_reserva_1',
+      'bar_reserva_2',
+      'bar_reserva_3',
+      'bar_reserva_4',
+      'bar_reserva_5',
+      'bar_reserva_6',
+    ],
     'text': '',
     'assets': [
       'asset/reservabar_1.jpg',
@@ -125,14 +154,22 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'happy': {
-    'details': [],
+    'details': [
+      'bar_happy'
+    ],
     'text': '',
     'assets': [
       'asset/happy.jpg',
     ],
   },
   'produtos': {
-    'details': [],
+    'details': [
+      'bar_produtos_1',
+      'bar_produtos_2',
+      'bar_produtos_3',
+      'bar_produtos_4',
+      'bar_produtos_5',
+    ],
     'text': '',
     'assets': [
       'asset/produtos_1.jpg',
@@ -142,7 +179,11 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'perfil': {
-    'details': [],
+    'details': [
+      'bar_perfil_1',
+      'bar_perfil_2',
+      'bar_perfil_3',
+    ],
     'text': '',
     'assets': [
       'asset/perfil_1.jpg',
@@ -151,7 +192,9 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'assinatura': {
-    'details': [],
+    'details': [
+      'bar_assinatura_1'
+    ],
     'text': '',
     'assets': [
       'asset/assinatura_1.jpg',
@@ -159,7 +202,11 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'login': {
-    'details': [],
+    'details': [
+      'bar_login_1',
+      'bar_login_2',
+      'bar_login_3',
+    ],
     'text': '',
     'assets': [
       'asset/loginbar_1.jpg',
@@ -168,7 +215,10 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'qrcode': {
-    'details': [],
+    'details': [
+      'bar_qr_2',
+      'bar_qr_3',
+    ],
     'text': '',
     'assets': [
       'asset/qr_1.jpg',
@@ -176,14 +226,21 @@ var nobutecoErpPagesDetais = {
     ],
   },
   'garcom': {
-    'details': [],
+    'details': [
+      'bar_garcom_1',
+      'bar_garcom_2',
+    ],
     'text': '',
     'assets': [
       'asset/garcom.jpg',
     ],
   },
-  'banda': {
-    'details': [],
+  'band': {
+    'details': [
+      'bar_band_1',
+      'bar_band_2',
+      'bar_band_3',
+    ],
     'text': '',
     'assets': [
       'asset/banda_1.jpg',
@@ -192,9 +249,55 @@ var nobutecoErpPagesDetais = {
   },
 };
 var nobutecoBandPagesDetais = {
-  'pagamento': {
-    'details': [],
+  'home': {
+    'details': [
+      'band_home_1',
+      'band_home_2',
+      'band_home_3',
+    ],
     'text': '',
-    'assets': [],
+    'assets': [
+      'asset/inicio_1.jpg',
+      'asset/inicio_2.jpg',
+    ],
+  },
+  'pesquisa': {
+    'details': [
+      'band_buscar_1',
+      'band_buscar_2',
+    ],
+    'text': '',
+    'assets': [
+      'asset/buscar.jpg',
+    ],
+  },
+  'agenda': {
+    'details': [
+      'band_agenda_1',
+      'band_agenda_2',
+    ],
+    'text': '',
+    'assets': [
+      'asset/agenda.jpg',
+    ],
+  },
+  'pagamento': {
+    'details': [
+      'band_pagamento'
+    ],
+    'text': '',
+    'assets': [
+      'asset/assinatura_1.jpg'
+    ],
+  },
+  'perfil': {
+    'details': [
+      'band_perfil'
+    ],
+    'text': '',
+    'assets': [
+      'asset/band.jpg',
+    ],
   },
 };
+

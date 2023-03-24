@@ -37,19 +37,8 @@ var noButecoProject = Project(
   ],
   projectArc: {
     'aplications': [nobuteco, nobutecoErp, nobutecoBand],
-    'problema': '',
-    'proposta': '',
-    'recursos': '',
-    'proximos_desafios': '',
-    'rentabilidade': '',
+    'problema': 'problems_project',
+    'proposta': 'proposta_text',
+    'proximos_desafios': 'proximos_desafios_text',
   },
 );
-
-var map={
-  'aplications':'Aplicativos',
-  'problema':'Problema',
-  'proposta':'Proposta',
-  'recursos':'Recursos',
-  'proximos_desafios':'Próximos desafios',
-  'rentabilidade':'Rentabilidade',
-};

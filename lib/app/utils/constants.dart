@@ -34,4 +34,9 @@ var nobutecoBand = Nobuteco(
     logo: 'asset/logo_app.png',
     description:
         'interface for musicians and bands to connect with customers and fans. Look for opportunities in your region and inform your audience about your agenda.',
-    instructions: []);
+    instructions: [
+      '',
+      '',
+      '',
+      '',
+    ]);
