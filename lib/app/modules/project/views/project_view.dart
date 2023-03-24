@@ -15,49 +15,54 @@ class ProjectView extends GetView<ProjectController> {
       return Scaffold(
         body: DefaultTabController(
           length: controller.project!.projectArc.length,
-          child: CustomScrollView(
-            slivers: [
-              SliverAppBar(
-                pinned: true,
-                leading: Container(),
-                title: Text(controller.project!.projectName),
-              ),
-              SliverPadding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 16.sp, vertical: 4.sp),
-                sliver: SliverToBoxAdapter(
-                  child: Text(controller.project!.descrition),
-                ),
-              ),
-              SliverPersistentHeader(
-                pinned: true,
-                delegate: SliverAppBarDelegate(
-                  tabBar: TabBar(
-                    onTap: (index) {
-                      controller.indexTab.value = index;
-                      controller.update();
-                    },
-                    isScrollable: true,
-                    tabs: List<Widget>.generate(
-                      controller.project!.projectArc.length,
-                      (int index) {
-                        return Tab(
-                          text: controller.project!.projectArc.keys
-                              .toList()[index]
-                              .toLowerCase()
-                              .capitalize,
-                        );
-                      },
+          child: Center(
+            child: Container(
+              constraints: BoxConstraints(maxWidth: 1000.sp),
+              child: CustomScrollView(
+                slivers: [
+                  SliverAppBar(
+                    pinned: true,
+                    leading: Container(),
+                    title: Text(controller.project!.projectName),
+                  ),
+                  SliverPadding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.sp, vertical: 4.sp),
+                    sliver: SliverToBoxAdapter(
+                      child: Text(controller.project!.descrition.tr),
                     ),
                   ),
-                ),
+                  SliverPersistentHeader(
+                    pinned: true,
+                    delegate: SliverAppBarDelegate(
+                      tabBar: TabBar(
+                        onTap: (index) {
+                          controller.indexTab.value = index;
+                          controller.update();
+                        },
+                        isScrollable: true,
+                        tabs: List<Widget>.generate(
+                          controller.project!.projectArc.length,
+                          (int index) {
+                            return Tab(
+                              text: controller.project!.projectArc.keys
+                                  .toList()[index]
+                                  .toLowerCase().tr
+                                  .capitalize,
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                  SliverToBoxAdapter(
+                    child: BodyProject(
+                        body: controller.project!.projectArc.values
+                            .toList()[controller.indexTab.value]),
+                  )
+                ],
               ),
-              SliverToBoxAdapter(
-                child: BodyProject(
-                    body: controller.project!.projectArc.values
-                        .toList()[controller.indexTab.value]),
-              )
-            ],
+            ),
           ),
         ),
       );

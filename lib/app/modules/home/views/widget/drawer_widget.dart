@@ -72,10 +72,6 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         'title': 'about_me'.tr,
         'icon': Icons.person_2_rounded,
       },
-      {
-        'title': 'contact'.tr,
-        'icon': Icons.email_outlined,
-      },
     ];
 
     return Drawer(
@@ -88,9 +84,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 var list = drawer[index];
                 return ListTile(
                   onTap: () {
-                    if (index != 2) {
-                      controller.changeIndex(index);
-                    }
+                    controller.changeIndex(index);
                   },
                   title: Text(list['title'] as String),
                   leading: CircleAvatar(child: Icon(list['icon'] as IconData)),

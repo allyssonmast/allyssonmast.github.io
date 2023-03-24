@@ -17,47 +17,49 @@ class AppDatailsView extends GetView<AppDatailsController> {
           length: controller.app.pages.length,
           child: Scaffold(
             appBar: AppBar(
-              title: Text(controller.app.name),
-              centerTitle: true,
-                leading: Container()
-            ),
-            body: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
-              child: CustomScrollView(
-                slivers: [
-                  SliverToBoxAdapter(
-                    child: AtividadesWidget(app: controller.app),
-                  ),
-                  SliverPersistentHeader(
-                    pinned: true,
-                    delegate: SliverAppBarDelegate(
-                      tabBar: TabBar(
-                        isScrollable: true,
-                        onTap: (index) {
-                          controller.indexPage.value = index;
-                          controller.update();
-                        },
-                        tabs: List<Widget>.generate(
-                          controller.app.pages.length,
-                          (int index) {
-                            return Tab(
-                              text: controller.app.pages.keys
-                                  .toList()[index]
-                                  .toLowerCase()
-                                  .capitalize,
-                            );
+                title: Text(controller.app.name),
+                centerTitle: true,
+                leading: Container()),
+            body: Center(
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 1200.sp),
+                child: CustomScrollView(
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: AtividadesWidget(app: controller.app),
+                    ),
+                    SliverPersistentHeader(
+                      pinned: true,
+                      delegate: SliverAppBarDelegate(
+                        tabBar: TabBar(
+                          isScrollable: true,
+                          onTap: (index) {
+                            controller.indexPage.value = index;
+                            controller.update();
                           },
+                          tabs: List<Widget>.generate(
+                            controller.app.pages.length,
+                            (int index) {
+                              return Tab(
+                                text: controller.app.pages.keys
+                                    .toList()[index]
+                                    .toLowerCase()
+                                    .tr
+                                    .capitalize,
+                              );
+                            },
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SliverToBoxAdapter(
-                    child: PagesDetailsWidget(
-                      app: controller.app,
-                      indexPage: controller.indexPage.value,
-                    ),
-                  )
-                ],
+                    SliverToBoxAdapter(
+                      child: PagesDetailsWidget(
+                        app: controller.app,
+                        indexPage: controller.indexPage.value,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -78,9 +80,12 @@ class AtividadesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          app.description,
-          style: TextStyle(fontSize: 15.sp),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
+          child: Text(
+            app.description,
+            style: TextStyle(fontSize: 15.sp),
+          ),
         ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 15.0.sp),
@@ -105,8 +110,9 @@ class AtividadesWidget extends StatelessWidget {
         Card(
           child: InkWell(
             onTap: () {},
-            child: const Image(
-              image: AssetImage('asset/googleplay_appstore.png'),
+            child: Image(
+              height: 50.sp,
+              image: const AssetImage('asset/googleplay_appstore.png'),
             ),
           ),
         ),
@@ -127,11 +133,12 @@ class PagesDetailsWidget extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.only(bottom: 8.0.sp, top: 16.sp),
+          padding: EdgeInsets.symmetric(vertical: 15.0.sp, horizontal: 16.0.sp),
           child: Text(app.pages.values.toList()[indexPage]['text']),
         ),
         ListView.builder(
             shrinkWrap: true,
+            padding: EdgeInsets.symmetric(horizontal: 8.0.sp),
             physics: const NeverScrollableScrollPhysics(),
             itemCount: app.pages.values.toList()[indexPage]['details'].length,
             itemBuilder: (_, index) {
@@ -156,7 +163,7 @@ class PagesDetailsWidget extends StatelessWidget {
               );
             }),
         SizedBox(
-          height: 400.sp,
+          height: 500.sp,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount:
@@ -166,7 +173,8 @@ class PagesDetailsWidget extends StatelessWidget {
                 clipBehavior: Clip.antiAlias,
                 child: Image(
                   image: AssetImage(
-                      app.pages.values.toList()[indexPage]['assets'][index]),
+                    app.pages.values.toList()[indexPage]['assets'][index],
+                  ),
                 ),
               );
             },

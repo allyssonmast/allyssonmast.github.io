@@ -21,7 +21,7 @@ class Skills extends StatelessWidget {
       children: [
         Padding(
           key: globalKey,
-          padding: EdgeInsets.only(top:16.sp,left: 16.sp),
+          padding: EdgeInsets.only(top: 16.sp, left: 16.sp),
           child: Text(
             'skill'.tr,
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17.sp),
@@ -38,12 +38,12 @@ class Skills extends StatelessWidget {
               globalKey: globalKey,
             );
           },
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 600,
-              mainAxisExtent: 360,
-              childAspectRatio: 1,
-              crossAxisSpacing: 4,
-              mainAxisSpacing: 4),
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 600.sp,
+              mainAxisExtent: 320.sp,
+              childAspectRatio: 1.sp,
+              crossAxisSpacing: 4.sp,
+              mainAxisSpacing: 4.sp),
         )
       ],
     );

@@ -71,7 +71,9 @@ class AboutMeView extends GetView<AboutMeController> {
                 globalKey: listKey[1],
                 list: listWork,
               ),
-              SizedBox(height: 8.sp,),
+              SizedBox(
+                height: 8.sp,
+              ),
               EducationWorkAboutMe(
                   globalKey: listKey[2],
                   title: 'education'.tr,
@@ -150,12 +152,12 @@ class EducationWorkAboutMe extends StatelessWidget {
               evento: list[index],
             );
           },
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 407,
-              mainAxisExtent: 364,
-              childAspectRatio: 1,
-              crossAxisSpacing: 4,
-              mainAxisSpacing: 4),
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 407.sp,
+              mainAxisExtent: 320.sp,
+              childAspectRatio: 1.sp,
+              crossAxisSpacing: 4.sp,
+              mainAxisSpacing: 4.sp),
         ),
       ],
     );

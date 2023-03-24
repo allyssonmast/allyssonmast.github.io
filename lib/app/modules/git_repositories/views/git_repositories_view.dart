@@ -15,7 +15,7 @@ class GitRepositoriesView extends GetView<GitRepositoriesController> {
   Widget build(BuildContext context) {
 
     var map = {
-      '': 'Todos',
+      '': 'all'.tr,
       'Kotlin': 'Android',
       'Dart': 'Flutter',
     };
@@ -120,6 +120,7 @@ class GitHubWidgets extends StatelessWidget {
                     padding: EdgeInsets.all(4.sp),
                     constraints: BoxConstraints(maxWidth: 500.sp),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         ListTile(
@@ -151,6 +152,11 @@ class GitHubWidgets extends StatelessWidget {
                             ],
                           ),
                         ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 8.0.sp,top: 8.sp,bottom: 4.sp),
+                          child: Text('${'topics'.tr}:',style:const TextStyle(fontWeight: FontWeight.w700),textAlign: TextAlign.start,),
+                        ),
+
                         Wrap(
                           spacing: 4.sp,
                           children: [

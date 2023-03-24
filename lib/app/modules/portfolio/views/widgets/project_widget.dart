@@ -15,7 +15,7 @@ class ProjectWidget extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 90.sp, left: 8.sp, right: 8.sp),
       child: InkWell(
         onTap: () => Get.toNamed(
-            project.projectName != 'kotlin_applications'.tr
+            project.projectName != 'Kotlin Applications'
                 ? Routes.PROJECT
                 : Routes.GIT_REPOSITORIES,
             parameters: {'id': project.projectName.tr}),

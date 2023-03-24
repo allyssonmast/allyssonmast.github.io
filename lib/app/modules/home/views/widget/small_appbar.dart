@@ -21,7 +21,6 @@ class _SmallAppBarState extends State<SmallAppBar> {
   List<IconData> icons = [
     Icons.sports_bar_outlined,
     Icons.person,
-    Icons.email_outlined,
     Icons.language_outlined,
     Icons.dark_mode,
   ];
@@ -35,10 +34,10 @@ class _SmallAppBarState extends State<SmallAppBar> {
       case 1:
         controller.changeIndex(index);
         break;
-      case 3:
+      case 2:
         _showPopupMenu();
         break;
-      case 4:
+      case 3:
         var theme = Get.isDarkMode ? ThemeMode.light : ThemeMode.dark;
         Get.changeThemeMode(theme);
         break;
@@ -85,7 +84,6 @@ class _SmallAppBarState extends State<SmallAppBar> {
     List<String> labels = [
       'Portifolio',
       'about_me'.tr,
-      'contact'.tr,
       'language'.tr,
       'dark_mode'.tr,
     ];

@@ -19,6 +19,7 @@ dependencies:
   dartz:
   freezed_annotation:
   lottie:
+
   flutter: 
     sdk: flutter
   intl: ^0.18.0

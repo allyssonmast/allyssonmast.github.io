@@ -21,5 +21,5 @@ var nobutecoWork = AboutMe(
     title: 'Founder & Software Developer',
     subTitle:'noButeco App',
     description: 'Bars and restaurants management',
-    startDate: DateTime(2019, 07),
-    finalDate: DateTime(2019,12));
+    startDate: DateTime(2021, 01),
+    finalDate: DateTime.now());

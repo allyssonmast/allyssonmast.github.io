@@ -10,9 +10,10 @@ var androidProjects = Project(
       'dasdasd adasda sd asda adnadasdasd aasdasdasda adasda sdasd asudhfluhf ohowiuhfoiguhoiugosdfsdf iuhidfs  ',
   subTitle: 'access_my_kotlin',
   details: [
-    'primeiro projeto',
-    'Segundo projeto',
-    'Terceiro projeto',
+    'Cryptocurrency',
+    'Dictionary',
+    'GoogleMaps with Jetpack',
+    'Restaurant Management',
   ],
   projectArc: {
     'Android Projects': '',
@@ -25,20 +26,30 @@ var noButecoProject = Project(
   projectName: 'noButeco App',
   url: 'asset/logo_erp.png',
   descrition:
-      'dasdasd adasda sd asda adnadasdasd aasdasdasda adasda sdasd asudhfluhf ohowiuhfoiguhoiugosdfsdf iuhidfs  ',
-  subTitle: 'Gerenciamento de Bares e restaurantes',
+      'nobute_description',
+  subTitle: 'nobute_sub',
   details: [
     'Delivery',
     'In person Orderns',
-    'Tericeiro motivo',
-    '4 motivo',
+    'Event Schedule',
+    'Menu by QrCode',
+    'Sales control',
   ],
   projectArc: {
-    'Aplicativos': [nobuteco, nobutecoErp, nobutecoBand],
-    'Problema': '',
-    'Proposta': '',
-    'Recursos': '',
-    'Próximos desafios': '',
-    'Rentabilidade': '',
+    'aplications': [nobuteco, nobutecoErp, nobutecoBand],
+    'problema': '',
+    'proposta': '',
+    'recursos': '',
+    'proximos_desafios': '',
+    'rentabilidade': '',
   },
 );
+
+var map={
+  'aplications':'Aplicativos',
+  'problema':'Problema',
+  'proposta':'Proposta',
+  'recursos':'Recursos',
+  'proximos_desafios':'Próximos desafios',
+  'rentabilidade':'Rentabilidade',
+};
