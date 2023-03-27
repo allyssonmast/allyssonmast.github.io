@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:page/app/modules/home/controllers/home_controller.dart';
+import 'package:portfolio/app/modules/home/controllers/home_controller.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({Key? key}) : super(key: key);

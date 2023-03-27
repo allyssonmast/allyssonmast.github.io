@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:page/app/data/model/skill.dart';
+import 'package:portfolio/app/data/model/skill.dart';
 
 class SkillWidget extends StatelessWidget {
   final GlobalKey globalKey;

@@ -16,11 +16,15 @@ class Nobuteco {
     required this.description,
     required this.subtTitle,
     required this.pages,
+    required this.url,
+    required this.urlOption,
     required this.instructions,
   });
 
   String name;
   String asset;
+  String url;
+  String urlOption;
   String logo;
   String subtTitle;
   String description;
@@ -31,6 +35,8 @@ class Nobuteco {
     name: json["name"],
     subtTitle: json["subtTitle"],
     pages: json["pages"],
+    url: json["url"],
+    urlOption: json["urlOption"],
     asset: json["asset"],
     logo: json["logo"],
     description: json["description"],
@@ -41,6 +47,7 @@ class Nobuteco {
     "name": name,
     "asset": asset,
     "logo": logo,
+    "url": url,
     "subtTitle": subtTitle,
     "description": description,
     "instructions": List<dynamic>.from(instructions.map((x) => x)),

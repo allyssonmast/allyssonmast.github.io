@@ -1,4 +1,4 @@
-import 'package:page/app/data/model/about.dart';
+import 'package:portfolio/app/data/model/about.dart';
 
 var siemensWork = AboutMe(
     url: 'asset/siemens.png',

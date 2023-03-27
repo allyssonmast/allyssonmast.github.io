@@ -2,8 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:page/app/modules/notfound/views/notfound_view.dart';
-import 'package:page/app/utils/theme.dart';
+import 'package:portfolio/app/modules/notfound/views/notfound_view.dart';
+import 'package:portfolio/app/utils/theme.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 import 'app/modules/notfound/bindings/notfound_binding.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return GetMaterialApp(
-          title: 'Allysson portifolio',
+          title: 'Allysson\'s portifolio',
           getPages: AppPages.routes,
           translations: TranslationService(),
           locale: TranslationService.locale,

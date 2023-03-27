@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:page/app/data/model/projects.dart';
-import 'package:page/app/modules/home/views/widget/apps_widget.dart';
-import 'package:page/app/routes/app_pages.dart';
+import 'package:portfolio/app/data/model/projects.dart';
+import 'package:portfolio/app/modules/home/views/widget/apps_widget.dart';
+import 'package:portfolio/app/routes/app_pages.dart';
 
 class ProjectWidget extends StatelessWidget {
   final Project project;

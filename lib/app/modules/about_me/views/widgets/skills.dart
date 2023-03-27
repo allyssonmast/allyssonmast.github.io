@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:page/app/modules/about_me/views/widgets/skill_widget.dart';
-import 'package:page/app/utils/skill_constant.dart';
+import 'package:portfolio/app/modules/about_me/views/widgets/skill_widget.dart';
+import 'package:portfolio/app/utils/skill_constant.dart';
 
 class Skills extends StatelessWidget {
   final GlobalKey globalKey;

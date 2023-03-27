@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:page/app/modules/home/controllers/home_controller.dart';
+import 'package:portfolio/app/modules/home/controllers/home_controller.dart';
 
 class SmallAppBar extends StatefulWidget with PreferredSizeWidget {
   const SmallAppBar({Key? key}) : super(key: key);

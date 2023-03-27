@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:page/app/modules/portfolio/views/widgets/project_widget.dart';
-import 'package:page/app/utils/project_constants.dart';
+import 'package:portfolio/app/modules/portfolio/views/widgets/project_widget.dart';
+import 'package:portfolio/app/utils/project_constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../controllers/portfolio_controller.dart';
@@ -37,7 +37,7 @@ class PortfolioView extends GetView<PortfolioController> {
                     ProjectWidget(project: androidProjects),
                     ProjectWidget(project: noButecoProject),
                   ],
-                )
+                ),
               ],
             ),
           ),
@@ -59,6 +59,41 @@ class SmallButtons extends StatelessWidget {
           : throw 'Could not launch $uriFinal';
     }
 
+    Future sendEmail(String subject, String body) async {
+      final Uri emailLaunchUri = Uri(
+        scheme: 'mailto',
+        path: 'allysson@hotmail.com',
+        queryParameters: {
+          'subject': subject,
+          'body': body,
+        },
+      );
+      if (await canLaunchUrl(emailLaunchUri)) {
+        await launchUrl(emailLaunchUri, mode: LaunchMode.externalApplication);
+      } else {
+        throw 'Could not launch email';
+      }
+    }
+
+    void makePhoneCall() async {
+      const phoneNumber = '+5584986282006';
+      Uri phoneLaunchUri = Uri.parse('tel:$phoneNumber');
+      if (await canLaunchUrl(phoneLaunchUri)) {
+        await launchUrl(phoneLaunchUri);
+      } else {
+        throw 'Could not launch phone';
+      }
+    }
+
+    void sendWhats() async {
+      String whats = '5584986282006';
+      String url0 = "https://api.whatsapp.com/send?phone=$whats";
+      Uri uriFinal = Uri.parse(url0);
+      await canLaunchUrl(uriFinal)
+          ? await launchUrl(uriFinal, mode: LaunchMode.externalApplication)
+          : throw 'Could not launch $uriFinal';
+    }
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 8.0.sp, vertical: 24.sp),
       child: Row(
@@ -71,7 +106,10 @@ class SmallButtons extends StatelessWidget {
                         'https://www.linkedin.com/in/allysson-mastrangelo-f-21623215a/';
                     await launch(url);
                   },
-                  icon: const FaIcon(FontAwesomeIcons.linkedin,color: Colors.blue,))),
+                  icon: const FaIcon(
+                    FontAwesomeIcons.linkedin,
+                    color: Colors.blue,
+                  ))),
           CircleAvatar(
               child: IconButton(
                   onPressed: () async {
@@ -81,10 +119,34 @@ class SmallButtons extends StatelessWidget {
                   icon: const FaIcon(FontAwesomeIcons.github))),
           CircleAvatar(
               child: IconButton(
-                  onPressed: () {}, icon: const FaIcon(Icons.email_outlined))),
+                  onPressed: () async {
+                    await sendEmail('', '');
+                  },
+                  icon: const FaIcon(Icons.email_outlined))),
           CircleAvatar(
               child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (_) {
+                          return AlertDialog(
+                            content:
+                                Text('${'contact'.tr}: +55 (84) 98628-2006'),
+                            actions: [
+                              TextButton.icon(
+                                onPressed: sendWhats,
+                                label: const Text('WhatsApp'),
+                                icon: const Icon(FontAwesomeIcons.whatsapp),
+                              ),
+                              TextButton.icon(
+                                onPressed: makePhoneCall,
+                                label: const Text('Call'),
+                                icon: const Icon(FontAwesomeIcons.phone),
+                              ),
+                            ],
+                          );
+                        });
+                  },
                   icon: const FaIcon(Icons.phone_android_outlined))),
         ],
       ),

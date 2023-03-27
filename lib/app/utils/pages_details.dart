@@ -1,16 +1,24 @@
 var nobutecoPagesDetais = {
-  'home': {
+  'event': {
     'details': [
-      'Bares, Promoções e HappyHours próximos',
-      'GoogleMaps para pesquisar por serviços disponíveis',
-      'Agenda de eventos, procure por eventos do seu gosto musical em uma data desejada'
+      'customer_event_1',
+      'customer_event_2',
     ],
-    'text':
-        'Pagina inicial responsável por mostrar o que há de melhor em uma região de 20Km do usuário.',
+    'text': '',
     'assets': [
       'asset/event_1.jpg',
       'asset/event_2.jpg',
       'asset/event_3.jpg',
+    ],
+  },
+  'home': {
+    'details': [
+      'customer_bar_1',
+      'customer_bar_2',
+    ],
+    'text':
+        'Pagina inicial responsável por mostrar o que há de melhor em uma região de 20Km do usuário.',
+    'assets': [
       'asset/home_1.jpg',
       'asset/home_2.jpg',
       'asset/map_1.jpg',
@@ -18,7 +26,11 @@ var nobutecoPagesDetais = {
     ],
   },
   'pesquisa': {
-    'details': [],
+    'details': [
+      'customer_pesquisa_1',
+      'customer_pesquisa_2',
+      'customer_pesquisa_3',
+    ],
     'text': '',
     'assets': [
       'asset/pesquisa_1.jpg',
@@ -26,7 +38,15 @@ var nobutecoPagesDetais = {
     ],
   },
   'cardapio': {
-    'details': [],
+    'details': [
+      'customer_cardapio_1',
+      'customer_cardapio_2',
+      'customer_cardapio_3',
+      'customer_cardapio_4',
+      'customer_cardapio_5',
+      'customer_cardapio_6',
+      'customer_cardapio_7',
+    ],
     'text': '',
     'assets': [
       'asset/cardapio_.jpg',
@@ -34,7 +54,11 @@ var nobutecoPagesDetais = {
     ],
   },
   'reserva': {
-    'details': [],
+    'details': [
+      'customer_reserva_1',
+      'customer_reserva_2',
+      'customer_reserva_3',
+    ],
     'text': '',
     'assets': [
       'asset/reserva_1.jpg',
@@ -43,7 +67,12 @@ var nobutecoPagesDetais = {
     ],
   },
   'produto': {
-    'details': [],
+    'details': [
+      'customer_produto_1',
+      'customer_produto_2',
+      'customer_produto_3',
+      'customer_produto_4',
+    ],
     'text': '',
     'assets': [
       'asset/addprod_3.jpg',
@@ -52,7 +81,13 @@ var nobutecoPagesDetais = {
     ],
   },
   'pedido': {
-    'details': [],
+    'details': [
+      'customer_pedido_1',
+      'customer_pedido_2',
+      'customer_pedido_3',
+      'customer_pedido_4',
+      'customer_pedido_5',
+    ],
     'text': '',
     'assets': [
       'asset/pedido_1.jpg',
@@ -61,7 +96,10 @@ var nobutecoPagesDetais = {
     ],
   },
   'pagamento': {
-    'details': [],
+    'details': [
+      'customer_pagamento_1',
+      'customer_pagamento_2',
+    ],
     'text': '',
     'assets': [
       'asset/pagamento_1.jpg',
@@ -69,7 +107,11 @@ var nobutecoPagesDetais = {
     ],
   },
   'login': {
-    'details': [],
+    'details': [
+      'customer_login_1',
+      'customer_login_2',
+      'customer_login_3',
+    ],
     'text': '',
     'assets': [
       'asset/login.jpg',
@@ -78,7 +120,10 @@ var nobutecoPagesDetais = {
     ],
   },
   'band': {
-    'details': [],
+    'details': [
+      'customer_band_1',
+      'customer_band_2',
+    ],
     'text': '',
     'assets': [
       'asset/band.jpg',
@@ -88,6 +133,18 @@ var nobutecoPagesDetais = {
 
 
 var nobutecoErpPagesDetais = {
+
+  'web': {
+    'details': [
+      'Web version',
+      'https:nobuteco.com/',
+      'Login test= email: c@hotmail.com || password: 123456',
+    ],
+    'text': '',
+    'assets': [
+      'asset/bar_home_web.png',
+    ],
+  },
   'home': {
     'details': [
       'bar_home_1',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:page/app/data/model/skill.dart';
+import 'package:portfolio/app/data/model/skill.dart';
 import 'package:simple_icons/simple_icons.dart';
 
 import '../modules/about_me/views/widgets/icon_skill.dart';

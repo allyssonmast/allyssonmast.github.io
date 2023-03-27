@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:page/app/utils/launch_url.dart';
+import 'package:portfolio/app/utils/launch_url.dart';
 import 'package:simple_icons/simple_icons.dart';
 
 import '../../../data/model/git_repos.dart';

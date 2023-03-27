@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:page/app/data/model/about.dart';
+import 'package:portfolio/app/data/model/about.dart';
 
 class AboutUniversityWidget extends StatelessWidget {
   final AboutMe evento;

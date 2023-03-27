@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../data/model/nobuteco.dart';
 import '../../project/views/project_view.dart';
@@ -83,14 +84,14 @@ class AtividadesWidget extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0.sp),
           child: Text(
-            app.description,
+            app.description.tr,
             style: TextStyle(fontSize: 15.sp),
           ),
         ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 15.0.sp),
           child: Text(
-            'Atividades',
+            'atividades'.tr,
             style: TextStyle(fontWeight: FontWeight.w900, fontSize: 18.sp),
           ),
         ),
@@ -104,18 +105,30 @@ class AtividadesWidget extends StatelessWidget {
               return ListTile(
                 horizontalTitleGap: 0,
                 leading: const Icon(Icons.check_circle_outline),
-                title: Text('$text,'),
+                title: Text(text.tr),
               );
             }),
-        Card(
-          child: InkWell(
-            onTap: () {},
-            child: Image(
-              height: 50.sp,
-              image: const AssetImage('asset/googleplay_appstore.png'),
-            ),
-          ),
-        ),
+        app.url != ''
+            ? Card(
+                child: InkWell(
+                  onTap: () async {
+
+                    String url =
+                        GetPlatform.isDesktop ? app.urlOption : app.url;
+
+                    Uri uriFinal = Uri.parse(url);
+                    await canLaunchUrl(uriFinal)
+                        ? await launchUrl(uriFinal,
+                            mode: LaunchMode.externalApplication)
+                        : throw 'Could not launch $uriFinal';
+                  },
+                  child: Image(
+                    height: 50.sp,
+                    image: const AssetImage('asset/googleplay_appstore.png'),
+                  ),
+                ),
+              )
+            : Text('test_interno'.tr),
       ],
     );
   }
@@ -134,7 +147,7 @@ class PagesDetailsWidget extends StatelessWidget {
       children: [
         ListView.builder(
             shrinkWrap: true,
-            padding: EdgeInsets.symmetric(horizontal: 8.0.sp,vertical: 8.sp),
+            padding: EdgeInsets.symmetric(horizontal: 8.0.sp, vertical: 8.sp),
             physics: const NeverScrollableScrollPhysics(),
             itemCount: app.pages.values.toList()[indexPage]['details'].length,
             itemBuilder: (_, index) {
@@ -151,7 +164,10 @@ class PagesDetailsWidget extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        app.pages.values.toList()[indexPage]['details'][index].toString().tr,
+                        app.pages.values
+                            .toList()[indexPage]['details'][index]
+                            .toString()
+                            .tr,
                       ),
                     ),
                   ],

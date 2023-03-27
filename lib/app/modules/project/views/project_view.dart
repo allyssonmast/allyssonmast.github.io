@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:page/app/data/model/nobuteco.dart';
-import 'package:page/app/routes/app_pages.dart';
+import 'package:portfolio/app/data/model/nobuteco.dart';
+import 'package:portfolio/app/routes/app_pages.dart';
 
 import '../controllers/project_controller.dart';
 
@@ -14,7 +14,7 @@ class ProjectView extends GetView<ProjectController> {
     return GetBuilder<ProjectController>(builder: (_) {
       return Scaffold(
         body: DefaultTabController(
-          length: controller.project!.projectArc.length,
+          length: controller.project.projectArc.length,
           child: Center(
             child: Container(
               constraints: BoxConstraints(maxWidth: 1000.sp),
@@ -23,13 +23,13 @@ class ProjectView extends GetView<ProjectController> {
                   SliverAppBar(
                     pinned: true,
                     leading: Container(),
-                    title: Text(controller.project!.projectName),
+                    title: Text(controller.project.projectName),
                   ),
                   SliverPadding(
                     padding:
                         EdgeInsets.symmetric(horizontal: 16.sp, vertical: 4.sp),
                     sliver: SliverToBoxAdapter(
-                      child: Text(controller.project!.descrition.tr),
+                      child: Text(controller.project.descrition.tr),
                     ),
                   ),
                   SliverPersistentHeader(
@@ -42,10 +42,10 @@ class ProjectView extends GetView<ProjectController> {
                         },
                         isScrollable: true,
                         tabs: List<Widget>.generate(
-                          controller.project!.projectArc.length,
+                          controller.project.projectArc.length,
                           (int index) {
                             return Tab(
-                              text: controller.project!.projectArc.keys
+                              text: controller.project.projectArc.keys
                                   .toList()[index]
                                   .toLowerCase().tr
                                   .capitalize,
@@ -56,9 +56,12 @@ class ProjectView extends GetView<ProjectController> {
                     ),
                   ),
                   SliverToBoxAdapter(
-                    child: BodyProject(
-                        body: controller.project!.projectArc.values
-                            .toList()[controller.indexTab.value]),
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 16.0.sp),
+                      child: BodyProject(
+                          body: controller.project.projectArc.values
+                              .toList()[controller.indexTab.value]),
+                    ),
                   )
                 ],
               ),
@@ -105,7 +108,7 @@ class BodyProject extends StatelessWidget {
     return body is String
         ? Padding(
           padding: EdgeInsets.all(16.0.sp),
-          child: Text(body.toString().tr),
+          child: Text(body.toString().tr,style: TextStyle(fontSize: 14.sp),),
         )
         : AppWidget(
             nobutecoList: body,
@@ -137,7 +140,7 @@ class AppWidget extends StatelessWidget {
                     children: [
                       ListTile(
                         title: Text(nobuteco.name.tr),
-                        subtitle: Text(nobuteco.subtTitle),
+                        subtitle: Text(nobuteco.subtTitle.tr),
                         leading: CircleAvatar(
                           radius: 24.sp,
                           backgroundImage: AssetImage(nobuteco.logo),
@@ -152,7 +155,7 @@ class AppWidget extends StatelessWidget {
                             return ListTile(
                               visualDensity: VisualDensity.compact,
                               leading: const Icon(Icons.check_circle_outline),
-                              title: Text(nobuteco.instructions[index]),
+                              title: Text(nobuteco.instructions[index].tr),
                             );
                           })
                     ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:page/app/modules/about_me/views/about_me_view.dart';
-import 'package:page/app/modules/portfolio/views/portfolio_view.dart';
+import 'package:portfolio/app/modules/about_me/views/about_me_view.dart';
+import 'package:portfolio/app/modules/portfolio/views/portfolio_view.dart';
 
 class HomeController extends GetxController {
   var pageController = PageController().obs;

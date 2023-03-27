@@ -1,7 +1,7 @@
-name: page
+name: portfolio
 version: 1.0.0+1
 publish_to: none
-description: A new Flutter project.
+description: A collection of projects that demonstrate my skills and experiences in project development.
 environment: 
   sdk: '>=2.19.4 <3.0.0'
 

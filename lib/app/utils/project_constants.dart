@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:page/app/data/model/projects.dart';
-import 'package:page/app/utils/constants.dart';
+import 'package:portfolio/app/data/model/projects.dart';
+import 'package:portfolio/app/utils/constants.dart';
 
 var androidProjects = Project(
   title: 'native_android',

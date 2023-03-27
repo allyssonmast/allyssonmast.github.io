@@ -1,42 +1,53 @@
-import 'package:page/app/data/model/nobuteco.dart';
+import 'package:portfolio/app/data/model/nobuteco.dart';
 
 import 'pages_details.dart';
 
 var nobuteco = Nobuteco(
     name: 'noButeco App',
-    subtTitle: 'Customer Interface',
+    url: 'https://nobuteco.page.link/app',
+    urlOption: 'https://play.google.com/store/apps/details?id=com.nobuteco.nobutecoapp',
+    subtTitle: 'interface_usuario',
     asset: 'asset/home_nobuteco.png',
     logo: 'asset/logo_app.png',
     pages: nobutecoPagesDetais,
-    description:
-        'User interface for delivery and face-to-face orders. Google Maps to show you restaurants in your area and the music events that take place there.',
+    description: 'detail_usuario',
     instructions: [
-      'Order for delivery and in person (without calling the waiter)',
-      'Table Reservation',
-      'Use the map and find bars in your area',
-      'Qr Code to access the restaurant profile',
-      'Payment by Pix and Credit Card',
-    ]);
+      'project_user_1',
+      'project_user_2',
+      'project_user_3',
+      'project_user_4',
+      'project_user_5',
+    ],
+);
 var nobutecoErp = Nobuteco(
     name: 'noButeco ERP',
-    subtTitle: 'Restaurant Interface',
+    subtTitle: 'interface_bar',
+    url: 'https://nobuteco.page.link/erp',
+    urlOption: 'https://play.google.com/store/apps/details?id=com.nobuteco.nobuteco_web',
     asset: 'asset/home_erp.png',
     logo: 'asset/logo_erp.png',
     pages: nobutecoErpPagesDetais,
-    description:
-        'Restaurant interface to receive delivery and in person orders, register and edit products, search for musical attractions in the region.',
-    instructions: []);
-var nobutecoBand = Nobuteco(
-    name: 'noButeco Band',
-    subtTitle: 'Band Interface',
-    asset: 'asset/nobutecoBand.jpeg',
-    pages: nobutecoBandPagesDetais,
-    logo: 'asset/logo_app.png',
-    description:
-        'interface for musicians and bands to connect with customers and fans. Look for opportunities in your region and inform your audience about your agenda.',
+    description: 'detail_bar',
     instructions: [
-      '',
-      '',
-      '',
-      '',
-    ]);
+      'project_bar_1',
+      'project_bar_2',
+      'project_bar_3',
+      'project_bar_4',
+    ],
+);
+var nobutecoBand = Nobuteco(
+  name: 'noButeco Band',
+  subtTitle: 'interface_band',
+  asset: 'asset/nobutecoBand.jpeg',
+  url: '',
+  urlOption: '',
+  pages: nobutecoBandPagesDetais,
+  logo: 'asset/logo_app.png',
+  description: 'detail_band',
+  instructions: [
+    'project_band_1',
+    'project_band_2',
+    'project_band_3',
+    'project_band_4',
+  ],
+);
