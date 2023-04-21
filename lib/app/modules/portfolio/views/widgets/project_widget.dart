@@ -15,10 +15,10 @@ class ProjectWidget extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 90.sp, left: 8.sp, right: 8.sp),
       child: InkWell(
         onTap: () => Get.toNamed(
-            project.projectName != 'Kotlin Applications'
-                ? Routes.PROJECT
-                : Routes.GIT_REPOSITORIES,
-            parameters: {'id': project.projectName.tr}),
+          project.projectName != 'noButeco App'
+              ? Routes.GIT_REPOSITORIES
+              : Routes.PROJECT,
+        ),
         child: Container(
           padding: EdgeInsets.all(8.sp),
           constraints: BoxConstraints(maxWidth: 400.sp),

@@ -141,6 +141,7 @@ class AppWidget extends StatelessWidget {
                       ListTile(
                         title: Text(nobuteco.name.tr),
                         subtitle: Text(nobuteco.subtTitle.tr),
+                        trailing: const Icon(Icons.arrow_forward_ios_sharp),
                         leading: CircleAvatar(
                           radius: 24.sp,
                           backgroundImage: AssetImage(nobuteco.logo),

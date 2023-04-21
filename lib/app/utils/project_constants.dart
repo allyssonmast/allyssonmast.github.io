@@ -2,18 +2,19 @@ import 'package:get/get.dart';
 import 'package:portfolio/app/data/model/projects.dart';
 import 'package:portfolio/app/utils/constants.dart';
 
+
 var androidProjects = Project(
-  title: 'native_android',
+  title: 'open_source',
   projectName: 'kotlin_applications'.tr,
   url: '',
   descrition:
       'dasdasd adasda sd asda adnadasdasd aasdasdasda adasda sdasd asudhfluhf ohowiuhfoiguhoiugosdfsdf iuhidfs  ',
   subTitle: 'access_my_kotlin',
   details: [
-    'Cryptocurrency',
-    'Dictionary',
-    'GoogleMaps with Jetpack',
-    'Restaurant Management',
+    'Kotlin',
+    'Flutter',
+    'Node.Js',
+    'Nest.Js',
   ],
   projectArc: {
     'Android Projects': '',

@@ -13,11 +13,12 @@ class GitRepositoriesView extends GetView<GitRepositoriesController> {
   const GitRepositoriesView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-
     var map = {
       '': 'all'.tr,
       'Kotlin': 'Android',
       'Dart': 'Flutter',
+      'JavaScript': 'Node.Js (JavaScript)',
+      'TypeScript': 'Node.Js (TypeScript)',
     };
 
     return Scaffold(
@@ -42,16 +43,16 @@ class GitRepositoriesView extends GetView<GitRepositoriesController> {
             length: map.length,
             child: CustomScrollView(
               slivers: [
-                 SliverAppBar(
+                SliverAppBar(
                   pinned: true,
                   leading: Container(),
-                  title:const Text('GitHub Repository'),
+                  title: const Text('GitHub Repository'),
                 ),
                 SliverToBoxAdapter(
                   child: Card(
                     margin: EdgeInsets.symmetric(horizontal: 8.sp),
                     child: ListTile(
-                      onTap: () async{
+                      onTap: () async {
                         var url = 'https://github.com/allyssonmast';
                         await LauncherUrl().launch(url);
                       },
@@ -68,6 +69,7 @@ class GitRepositoriesView extends GetView<GitRepositoriesController> {
                   pinned: true,
                   delegate: SliverAppBarDelegate(
                     tabBar: TabBar(
+                      isScrollable: true,
                       onTap: (index) {
                         controller.indexTab.value = index;
                         controller.update();
@@ -84,10 +86,13 @@ class GitRepositoriesView extends GetView<GitRepositoriesController> {
                 SliverToBoxAdapter(
                   child: Obx(
                     () => GitHubWidgets(
-                        repos: repos
-                            .where((element) => element.language.contains(
-                                map.keys.toList()[controller.indexTab.value]))
-                            .toList()),
+                      repos: repos
+                          .where(
+                            (element) => element.language.contains(
+                                map.keys.toList()[controller.indexTab.value]),
+                          )
+                          .toList(),
+                    ),
                   ),
                 ),
               ],
@@ -105,6 +110,25 @@ class GitHubWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var map = {
+      'Kotlin': const Icon(
+        SimpleIcons.kotlin,
+        color: Colors.deepPurpleAccent,
+      ),
+      'Dart': const Icon(
+        SimpleIcons.flutter,
+        color: Colors.blueAccent,
+      ),
+      'JavaScript': const Icon(
+        SimpleIcons.nodedotjs,
+        color: Colors.green,
+      ),
+      'TypeScript': const Icon(
+        SimpleIcons.nodedotjs,
+        color: Colors.green,
+      ),
+    };
+
     return Padding(
       padding: EdgeInsets.all(8.0.sp),
       child: Center(
@@ -113,7 +137,7 @@ class GitHubWidgets extends StatelessWidget {
             for (var repo in repos)
               Card(
                 child: InkWell(
-                  onTap: ()async{
+                  onTap: () async {
                     await LauncherUrl().launch(repo.url);
                   },
                   child: Container(
@@ -125,14 +149,7 @@ class GitHubWidgets extends StatelessWidget {
                       children: [
                         ListTile(
                           horizontalTitleGap: 0,
-                          leading: Icon(
-                            repo.language == 'Dart'
-                                ? SimpleIcons.flutter
-                                : SimpleIcons.kotlin,
-                            color: repo.language == 'Dart'
-                                ? Colors.blueAccent
-                                : Colors.deepPurple,
-                          ),
+                          leading: map[repo.language],
                           title: Text(
                             repo.name.replaceAll('_', ' ').capitalize!,
                             style: const TextStyle(fontWeight: FontWeight.w700),
@@ -153,10 +170,14 @@ class GitHubWidgets extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 8.0.sp,top: 8.sp,bottom: 4.sp),
-                          child: Text('${'topics'.tr}:',style:const TextStyle(fontWeight: FontWeight.w700),textAlign: TextAlign.start,),
+                          padding: EdgeInsets.only(
+                              left: 8.0.sp, top: 8.sp, bottom: 4.sp),
+                          child: Text(
+                            '${'topics'.tr}:',
+                            style: const TextStyle(fontWeight: FontWeight.w700),
+                            textAlign: TextAlign.start,
+                          ),
                         ),
-
                         Wrap(
                           spacing: 4.sp,
                           children: [

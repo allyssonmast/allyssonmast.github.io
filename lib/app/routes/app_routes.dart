@@ -19,6 +19,6 @@ abstract class _Paths {
   static const APP_DATAILS = '/app-datails';
   static const PORTFOLIO = '/portfolio';
   static const ABOUT_ME = '/about-me';
-  static const PROJECT = '/project';
+  static const PROJECT = '/noButeco';
   static const GIT_REPOSITORIES = '/git-repositories';
 }
